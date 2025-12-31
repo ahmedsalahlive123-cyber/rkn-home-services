@@ -1,9 +1,5 @@
 body {
- header h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
- font-family: Arial;
+  font-family: Tahoma, Arial, sans-serif;
   margin: 0;
   background-color: #f4f6f8;
 }
@@ -12,26 +8,45 @@ header {
   background-color: #0a3d62;
   color: white;
   text-align: center;
-  padding: 25px;
+  padding: 30px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 16px;
 }
 
 section {
-  background: white;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
+  margin: 30px;
 }
-.service {
-  margin-top: 25px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+
+#services h2 {
   text-align: center;
+  margin-bottom: 30px;
+}
+
+#services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .service img {
+  max-width: 220px;
   width: 100%;
-  max-width: 250px;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
