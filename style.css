@@ -1,176 +1,107 @@
-/* إعدادات عامة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
 body {
-    font-family: Tahoma, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f6f8;
-    direction: rtl;
-    color: #333;
+  background: #f6f8fb;
+  color: #333;
+  line-height: 1.8;
 }
 
-/* رأس الموقع */
-header {
-    background: linear-gradient(135deg, #0a5ad4, #063b8f);
-    color: #fff;
-    text-align: center;
-    padding: 40px 20px;
+/* ===== Services ===== */
+.services {
+  padding: 60px 20px;
+  text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 36px;
+.services h2 {
+  font-size: 32px;
+  color: #0b5ed7;
+  margin-bottom: 40px;
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 18px;
-    opacity: 0.95;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
 }
 
-/* العناوين */
-h2 {
-    text-align: center;
-    color: #0a5ad4;
-    margin-bottom: 30px;
-    font-size: 28px;
+.card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  transition: 0.3s;
 }
 
-h3 {
-    color: #0a5ad4;
-    margin-bottom: 10px;
+.card:hover {
+  transform: translateY(-6px);
 }
 
-/* الأقسام */
-section {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: auto;
+.card i {
+  font-size: 42px;
+  color: #0b5ed7;
+  margin-bottom: 15px;
 }
 
-/* قسم الخدمات */
-#services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-.service {
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card p {
+  font-size: 16px;
+  color: #666;
 }
 
-.service:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+/* ===== Contact ===== */
+.contact {
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
 }
 
-.service img {
-    width: 100%;
-    max-width: 260px;
-    border-radius: 10px;
-    margin-bottom: 15px;
+.contact h2 {
+  font-size: 30px;
+  color: #0b5ed7;
+  margin-bottom: 25px;
 }
 
-.service p {
-    font-size: 15px;
-    line-height: 1.8;
+.contact-card {
+  max-width: 420px;
+  margin: auto;
+  background: #f6f8fb;
+  padding: 25px;
+  border-radius: 14px;
 }
 
-/* قسم لماذا تختارنا */
-#why-us ul {
-    list-style: none;
-    padding: 0;
-    max-width: 600px;
-    margin: auto;
+.contact-card a {
+  color: #0b5ed7;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-#why-us li {
-    background: #fff;
-    margin-bottom: 10px;
-    padding: 12px 15px;
-    border-radius: 8px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    font-size: 16px;
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
 }
 
-/* قسم التواصل */
-#contact {
-    background: #f7f7f7;
-}
-
-.contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-}
-
-.contact-info {
-    flex: 1;
-    background: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.contact-info p {
-    margin-bottom: 15px;
-    font-size: 16px;
-}
-
-/* زر واتساب */
-.whatsapp-btn {
-    display: inline-block;
-    background: #25D366;
-    color: #fff;
-    padding: 12px 22px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.whatsapp-btn:hover {
-    background: #1ebd5a;
-}
-
-/* الخريطة */
-.map {
-    flex: 1;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* زر واتساب العائم */
 .whatsapp {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: #25D366;
-    color: #fff;
-    padding: 14px 18px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    z-index: 1000;
+  background: #25d366;
 }
 
-/* تحسين العرض على الجوال */
+/* ===== Mobile ===== */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 28px;
-    }
-
-    header p {
-        font-size: 16px;
-    }
-
-    .contact-container {
-        flex-direction: column;
-    }
+  .services h2,
+  .contact h2 {
+    font-size: 26px;
+  }
 }
